@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Andrew Phone Solution</title>
+    <style>
+        /* CSS styles for the website */
+        /* ... Add your custom CSS styles here ... */
+    </style>
+</head>
+<body>
+    <header>
+        <h1 contenteditable="true">Andrew Phone Solution</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li contenteditable="true">Screen Replacement</li>
+            <li contenteditable="true">Water Drainage</li>
+            <li contenteditable="true">Battery and Charging Port Replacement</li>
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:mundiaandrew001@gmail.com" contenteditable="true">@mundiaandrew001@gmail.com</a></p>
+        <p>Contact: <a href="tel:+254254715847894" contenteditable="true">+254254715847894</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Andrew Phone Solution. All rights reserved.</p>
+    </footer>
+
+    <script>
+        
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();   
+        alert('Thank you for your message!');
+        this.reset(); 
+        });
+        document.getElementById('external-link').addEventListener('click', function(event) {
+        event.preventDefault(); 
+        window.location.href = 'https://www.andrewphonesolutions.com';
+        });
+    </script>
+</body>
+</html>
