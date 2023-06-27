@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Andrew Phone Solutions</title>
+    <style>
+        /* CSS styles for the website */
+        /* ... Add your custom CSS styles here ... */
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="org-name">Andrew Phone Solution</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p id="org-description">At andrew phone solutions we ensure that our clients are well satisfied with the services provided</p>
+        <button id="edit-about">Edit</button>
+    </section>
+    
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul id="service-list">
+            <li contenteditable="true">Screen Replacement</li>
+            <li contenteditable="true">Water Drainage</li>
+            <li contenteditable="true">Battery and Charging Port Replacement</li>
+        </ul>
+        <button id="edit-services">Edit</button>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:mundiaandrew001@gmail.com" contenteditable="true">@mundiaandrew001@gmail.com</a></p>
+        <p>Contact: <a href="tel:+254715847894" contenteditable="true">+254715847894</a></p>
+        <button id="edit-contact">Edit</button>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Your Business Organization. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript code for website interactivity
+
+        // About section editing functionality
+        document.getElementById('edit-about').addEventListener('click', function() {
+            var orgDescription = prompt('Enter the updated description:');
+            document.getElementById('org-description').textContent = orgDescription;
+        });
+
+        // Services section editing functionality
+        document.getElementById('edit-services').addEventListener('click', function() {
+            var serviceList = prompt('Enter the updated services (comma-separated):');
+            var services = serviceList.split(',');
+            var serviceListElement = document.getElementById('service-list');
+            serviceListElement.innerHTML = ''; // Clear existing list
+            services.forEach(function(service) {
+                var li = document.createElement('li');
+                li.textContent = service.trim();
+                serviceListElement.appendChild(li);
+            });
+        });
+
+        // Contact section editing functionality
+        document.getElementById('edit-contact').addEventListener('click', function() {
+            var orgEmail = prompt('Enter the updated email:');
+            var orgContact = prompt('Enter the updated contact:');
+            document.getElementById('org-email').textContent = orgEmail;
+            document.getElementById('org-contact').textContent = orgContact;
+        });
+    </script>
+</body>
+</html>
